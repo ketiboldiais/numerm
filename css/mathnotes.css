@@ -1,0 +1,481 @@
+/* Fonts */
+		/* Julia Mono Font */
+		@font-face {
+			font-family: "JuliaMono";
+			src: url('../fonts/julia_mono/juliaMono_regular.woff2') format("woff2");
+			font-weight: normal;
+			font-style: normal;
+		}
+	/* Inconsolata Font */
+		@font-face {
+			font-family: "Inconsolata";
+			src: url('../fonts/inconsolata/inconsolata_regular.ttf');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: "Inconsolata";
+			src: url('../fonts/inconsolata/inconsolata_bold.ttf');
+			font-weight: bold;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: "Inconsolata";
+			src: url('../fonts/inconsolata/inconsolata_variable_width.ttf');
+			font-weight: normal;
+			font-style: italic;
+		}
+	/* CMU Serif Fonts */
+		@font-face {
+			font-family: "cmu_serif";
+			src: url("../fonts/cmu_serif/cmunrm.woff");
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: "cmu_serif";
+			src: url("../fonts/cmu_serif/cmunbx.woff");
+			font-weight: bold;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: "cmu_serif";
+			src: url("../fonts/cmu_serif/cmunti.woff");
+			font-weight: normal;
+			font-style: italic;
+		}
+
+		@font-face {
+			font-family: "cmu_serif";
+			src: url("../fonts/cmu_serif/cmunbi.woff");
+			font-weight: bold;
+			font-style: italic;
+		}
+
+
+/* Global styles */
+	html {font-size: 2.7vw;}
+/* Page layout */
+	body {
+		font-family: 'CMU Serif';
+		color: rgb(63, 63, 63);
+		margin: 0 8vw;
+	}
+	header {
+		margin: 1rem;
+	}
+	/* All content is in a section, which is in an article. Adjust distance between articles here. */
+	article {margin-top: 15vh; border-top: solid 1px grey;}
+	article:nth-child(1) {margin-top: 2vh;}
+	section {margin: 2.5vh 0}
+/* Nav and Note Lists */
+	.note_list a {
+		font-family: "Inconsolata";
+		text-decoration: none;
+		color: rgb(12, 84, 105);
+		
+	}
+/* Heading styles */
+	/* 
+	Each heading is in a section. Change distance between headings by changing section margins. 
+	*/
+	/* Styles for all headings */
+	h1,h2,h3,h4,h5,h6,p.subheading,p.problem,p.lemma {
+		margin: 0; 
+		margin-bottom: -0.3em;
+		padding:0;
+		font-family: 'Iowa LR'
+	}
+	h1 {
+		font-size: 3rem;
+		margin:0;
+		text-align: center;
+	}
+	/* heading 2 style. heading 2 always begins an article */
+	h2 {
+		margin:0;
+		font-size: 2.2rem;
+		text-align: left;
+	}
+	/* font sizes for rest of headings */
+	h3 {font-size: 1.3rem;}
+	h4 {font-size: 1.2rem;}
+	h5 {font-size: 1rem;}
+	h6 {font-size: 0.95rem;}
+	/* other headings */
+	p.subheading {
+		font-size: 95%;
+		font-weight: bold;
+		width: fit-content;
+		padding: 1px;
+	}
+	p.lemma {
+		font-size: 0.95rem;
+		font-weight: bold;
+		font-style: italic;
+	}
+	p.problem {
+		font-family: "Iowa LR";
+		font-size: 0.95rem;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	span.topic {
+		font-weight: bold;
+		font-size: 0.94rem;
+		font-family: 'Iowa LR';
+	}
+	div.rule span.topic{font-variant: small-caps; font-weight: normal;}
+	span.exh {font-style: italic; font-size: 0.95rem; text-decoration: underline;}
+/* Text styles */
+	.redText {color: #ea3c4dbc;}
+	.greenText {color: #6e9841;}
+	.blueText {color: #2376b2;}
+	.purpleText {color: #6d52b2ed;}
+	.underlineText {text-decoration: underline;}
+	.italicsText {font-style: italic;}
+	.boldText {font-weight: bold}
+	.smallCaps {font-variant: small-caps;}
+	.boldItalics {font-weight: bold; font-style: italic;}
+	.monoText {font-family: 'Inconsolata';}
+	.term {font-weight: bold; font-style: italic;}
+	mark {background-color: rgb(255, 232, 131);}
+/* paragraph styles */
+	p {
+		margin: 0;
+		padding: 0.5em 0 0 0; 
+		text-align: left;
+		line-height: 1.2;
+		font-size: 0.95rem;
+	}
+	section>p:nth-last-child(1) {padding-bottom: 0;}
+	sup {font-size: 0.6rem;}
+	p.fn {font-size: 0.85rem;}
+	p.nota {
+		display: list-item;
+		list-style-type: none;
+	}
+	p.nota::before {
+		content: "n.b. "; 
+		font-variant: small-caps;
+	}
+/* list styles */
+	li {font-size: 0.95rem;}
+	ol,ul {
+		margin: 0;
+		padding: 0;
+		padding-left: 2em;
+	}
+	ol ol {list-style-type: lower-latin;}
+	ol li {margin-bottom: 0.2em;}
+	ul>li::marker {font-size: 0.65em}
+	figure.math-display>div>ul {margin: 0 10%;}
+	figure.math-display>div>ul>li {margin-bottom: 1%;}
+	figure.math-display>div>ul.larg {
+		list-style-type: 
+		none; font-size: 0.85rem; 
+		width: fit-content; 
+		margin: 0;
+	}
+	figure.math-display>div ul.def {
+		list-style-type: none; 
+		width: fit-content; 
+		margin: 0;
+		margin-top: 0.5em;
+	}
+	ul.larg li:nth-last-child(2) {
+		border-bottom: 1px solid rgb(35, 35, 35); 
+		padding-bottom: 0.3em;
+	}
+	ul.larg li {white-space: pre; width:100%}
+	ul.larg li.conc::marker {content: "\2234  "; font-size: 1.4em;}
+	ul.def {
+		margin: 1.5% 0 0 0;
+		list-style-type: none;
+	}
+	ul.def {
+		margin-left: 8%;
+	}
+	ul.def li.where::marker {
+		content: "where  "; 
+		font-size: 1em;
+	}
+	ul.answer li {margin: 0.8em 0;}
+	div.checklist {margin: 1%}
+	div.checklist>ul {padding: 0; width: 100%;}
+	div.checklist ul {list-style: none;}
+	div.checklist ul li::before {content: "\25A1 "; padding-right: 0.2em;}
+/* code */
+	code, pre {
+		width: fit-content;
+		font-family: 'JuliaMono';
+		text-align: left;
+		font-size: 0.7rem;
+		white-space: pre-wrap;
+		word-spacing: normal;
+		word-break: normal;
+		word-wrap: normal;
+		line-height: 1.4;
+		-moz-tab-size: 3;
+		-o-tab-size: 3;
+		tab-size: 3;
+
+		-webkit-hyphens: none;
+		-moz-hyphens: none;
+		-ms-hyphens: none;
+		hyphens: none;
+	}
+	pre {
+		margin: 0.5% 0;
+		padding: 0.4rem 0.45rem;
+		overflow: auto;
+		border: 1px solid rgb(182, 182, 182);
+		border-radius: 0.3em;
+	}
+	pre[class*="language-pseudo"] {
+		padding: 0.2em 0.4em;
+		border: dashed 1px rgb(164, 164, 164);
+		margin: 1% 0;
+		text-align: left;
+		height: fit-content;
+		box-shadow: none;
+		white-space: pre-wrap;
+		word-spacing: normal;
+		word-break: normal;
+		word-wrap: normal;
+		line-height: 1;
+		-moz-tab-size: 3;
+		-o-tab-size: 3;
+		tab-size: 3;
+
+
+		-webkit-hyphens: none;
+		-moz-hyphens: none;
+		-ms-hyphens: none;
+		hyphens: none;
+	}
+	code[class*="language-pseudo"] {
+		font-size: 0.7rem;
+		color: #424242; /* base00 */
+	}
+
+/* Details styling */
+	details {
+		padding: 0; 
+		margin: 0;
+		margin-bottom: 0.5rem;
+		width: 100%;
+	}
+	details.answer {
+		margin: 0 3% 0 3%;
+	}
+	details > p {padding: 0 0 1% 0;}
+	details:hover {cursor: pointer;}
+	details summary {
+		list-style: none; 
+		font-size: 0.9rem;
+		color: rgb(137, 137, 137);
+		margin: 0; 
+		padding: 0;
+	}
+	details summary::-webkit-details-marker {display: none;}
+	details > ol ul {
+		margin: 0;
+		padding: 0;
+		margin-left: 1em;
+	}
+	ul.answer li {list-style-type: none;}
+	details li {margin-bottom: 1%;}
+/* Katex styles */
+	.katex {
+		font-size: 0.95em !important;
+		font-weight: inherit !important;
+		color: inherit !important;
+	}
+	span.katex-display {
+		font-size: 1em !important;
+	}
+	span.katex-html {max-width: 100% !important;}
+	.katex-display > .newline {padding-bottom: 1em !important;}
+	.mord.texttt {font-family: 'Inconsolata' !important;}
+	g {font-family: 'CMU Serif' !important;}
+/* Figure styles */
+	figure {
+		margin: 3% 20%;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	figcaption {
+		padding: 0;
+		margin: 0.2em 0 0 0;
+		font-style: italic;
+		font-size: 0.8rem;
+	}
+	/* Use math-display instead of katex display math; katex is absolute hell with styling */
+	figure.math-display, figure.table {
+		display: flex;
+		margin: 0.5rem 0; 
+		align-content: center;
+		width: 100%
+	}
+	.math-display > div > p {
+		padding: 0; 
+		margin: 0; 
+		margin-top: 0.4em;
+	}
+	figure.graph-display {
+		margin: 0;
+	}
+/* Special divs */
+	div.compare {
+		margin: 1% 0;
+		display: grid;
+		grid-auto-columns: 1fr;
+		column-gap: 1ch;
+		grid-auto-flow: column;
+	}
+	div.compare > figure {
+		display:block;
+		margin:0;
+		width: fit-content;
+	}
+	div.compare > figure > figcaption {
+		display:block;
+		text-align: center;
+		font-size: 0.7rem;
+	}
+	div.rule {
+		margin: 2% 10%;
+	}
+/* Image styles */
+	img {width: 100%;}
+	/* Image widths for SVGs */
+	.ten-p {width: 10%;}
+	.twenty-p {width: 20%;}
+	.quarter-p {width: 25%;}
+	.thirty-p {width: 30%;}
+	.forty-p {width: 40%;}
+	.fifty-p {width: 50%;}
+	.sixty-p {width: 60%;}
+	.seventy-p {width: 70%;}
+	.eighty-p {width: 80%;}
+	.ninety-p {width: 90%;}
+	.hundred-p {width: 100%;}
+/* Table styles */
+	table {
+		border: solid 1px rgb(175, 175, 175);
+		border-collapse: collapse;
+		margin: 0;
+		width: 100%;
+	}
+	table * {font-size: 0.8rem;}
+	th,td {
+		border: solid 1px rgb(175, 175, 175);
+		width: fit-content;
+		padding: 0.5vmin;
+	}
+	tr > td:nth-child(1) {text-align: center;}
+	th {text-align: center}
+	td {text-align: left;}
+	.cell-hl {background-color: rgb(254, 244, 194)}
+	table.truth_table {margin: 0; padding: 0; width: fit-content}
+	table.truth_table * {font-size: 0.75rem;}
+	table.truth_table th {
+		margin: 0; 
+		padding: 0.2em; 
+		text-align: center; 
+		width: fit-content;
+		font-family: "Inconsolata";
+		font-style: normal;
+	}
+	table.truth_table td {
+		margin: 0; 
+		padding: 0.2em; 
+		text-align: center; 
+		width: fit-content;
+		font-family: "Inconsolata";
+		font-style: normal;
+	}
+	/* Property Table - for properties of entities/summaries */
+	table.property_table {margin: 0; padding: 0; width: fit-content}
+	table.property_table * {font-size: 0.75rem;}
+	table.property_table th {
+		margin: 0; 
+		padding: 0.2em; 
+		text-align: center;
+		width: fit-content;
+		font-family: "Inconsolata";
+		font-style: normal;
+	}
+	table.property_table td {
+		width: fit-content;
+		font-family: "Inconsolata";
+		font-style: normal;
+	}
+	table.proof_table {margin: 0; padding: 0; width: fit-content; border: none;}
+	table.proof_table td {padding: 1%}
+	table.proof_table * {border: none; font-size: 0.9rem;}
+	table.proof_table tr > td {text-align: left;}
+/* margin notes */
+
+	.sidenote,
+	.marginnote {
+		float: right;
+		clear: right;
+		padding:0;
+		margin-right: -22vw;
+		width: 30%;
+		margin-bottom: 0;
+		font-size: 0.9rem;
+		font-style: italic;
+		color: rgb(176, 176, 176);
+		line-height: 1.3;
+		vertical-align: baseline;
+		position: relative;
+	}
+
+	aside p {text-align: left; margin: 0; padding: 0;}
+
+/* proof styles */
+	div.conclusion > ul,
+	div.premises > ul {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	div.premises > ul li:nth-child(2):before {content: "\2235"; padding-right: 1ch;}
+	div.premises > ul li:nth-child(2) {padding-left: 1em; text-indent: -1em;}
+	div.conclusion > ul li, 
+	div.premises > ul li {
+		font-size: 0.85rem;
+		width: 50%;
+		margin-bottom: 1em;
+		display: block;
+		flex: 0 1 auto;
+		list-style-type: none;
+	}
+	div.premises ul li:nth-child(2) {
+		font-style: italic;
+	}
+	div.mproof {margin: 2% 5%;}
+
+	/* Another proof style, this one is vertical; horizontal layout is not good for long equations -- longer equations, need wrapping, less readable. This uses nested list items. Reasons are numbered, computation is nested below number. Some margin placed on the ul element because with large fractions, becomes too unreadable.*/
+	ol.arg>ul {list-style: none; margin: 0.5em}
+/* Media Queries */
+	@media screen and (min-width: 501px) and (max-width: 900px) {
+		html {font-size: 1.9vw;}
+		body {padding: 0 8vw;}
+	}
+	@media screen and (min-width: 0px) and (max-width: 500px) {
+		html {font-size: 2.6vw;}
+	}
