@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Basic Mathematics</title>
+		<link rel="stylesheet" href="css/mathnotes.css" />
+		<base href="http://127.0.0.1:5500/basicmath/" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous" />
+
+	</head>
+	<body>
+		<header><h1>Basic Mathematics</h1></header>
+		<main>	 
+		<!-- Euclidean Geometry -->
+			<article
+				id="euclidean_geometry"
+				class="grid"
+				data-colcade="columns: .grid-col, items: .grid-item"
+			>
+				<div class="grid-col grid-col--1"></div>
+				<div class="grid-col grid-col--2"></div>
+				<div class="grid-col grid-col--3"></div>
+				<div class="grid-col grid-col--4"></div>
+				<section class="grid-item">
+					<h2>Euclidean Geometry</h2>
+				</section>
+
+				<section id="euclidean_geometry_intro" class="grid-item">
+					<h3>Preface</h3>
+					<p>Studying Euclidean geometry in foundational mathematics is a tradition that dates back to the Ancient greeks. As a nod to this tradition, we explore the material in the following sections.</p>
+				</section>
+
+				<section id="points_lines_and_planes" class="grid-item">
+					<h3>Points, Lines, &amp; Planes</h3>
+					<!-- Points -->
+						<p><span class="topic">Points.</span> In geometry, a point is a location. It has no dimensions &mdash; i.e., no width, length, or depth. We represent a point with a dot. We generally denote points with capital letters. For example, the point ${A,}$ among others:</p>
+						<figure><img src="images/single_point.svg" alt="single point" loading="lazy" class="sixty-p"></figure>
+
+					<!-- Line Segments -->
+						<p><span class="topic">Line Segments.</span> With two points, we can draw a straight path from one point to the other, forming a <span class="term">line segment</span>. The two points at the ends of the line segment are called <span class="term">endpoints</span>. With points ${A}$ and ${B,}$ we denote the line segment between the two points ${\overline{\rm AB}.}$</p>
+						<p>Note, however, that the endpoints are not the only points on the line segment. A line segment contains infinitely many points. The endpoints are just two special points indicating the line segment's ends. A third special point is the <span class="term">midpoint</span>, the point exactly halfway between the endpoints. This means the midpoint is the same distance from both endpoints. We express this fact when we say that the midpoint is <span class="term">equidistant</span> from the endpoints. We use tick marks to indicate that line segments are of equal length, using multiple tick marks for multiple line segments of equal length.</p>
+				</section>
+
+
+			</article>
+		</main>
+
+		<footer></footer>
+	</body>
+	<!-- Scripts -->
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" ></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				renderMathInElement(document.body, {
+					// customised options
+					// • auto-render specific keys, e.g.:
+					delimiters: [
+						{ left: "$$", right: "$$", display: true },
+						{ left: "$", right: "$", display: false },
+						{ left: "\\(", right: "\\)", display: false },
+						{ left: "\\[", right: "\\]", display: true },
+					],
+					// • rendering keys, e.g.:
+					throwOnError: false,
+				});
+			});
+		</script>
+		<script src="https://unpkg.com/function-plot@1.22.2/dist/function-plot.js"></script>
+		<script src="/basicmath/js/basicmath.js"></script>
+</html>
