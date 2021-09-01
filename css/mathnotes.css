@@ -63,15 +63,16 @@
 	body {
 		font-family: 'CMU Serif';
 		color: rgb(63, 63, 63);
-		margin: 0;
+		margin: 0 2vh;
 		padding: 0;
 	}
 	main {
 		display: grid;
 		grid-template-columns: 22% 73%;
+		margin-bottom: 4vh;
 	}
 	header {
-		margin: 1rem;
+		margin: 1rem 0;
 	}
 	/* All content is in a section, which is in an article. Adjust distance between articles here. */
 	article:nth-child(1) {margin-top: 2vh;}
@@ -84,7 +85,7 @@
 
 	main > nav {
 		position: sticky;
-		top: 2rem;
+		top: 1rem;
 		align-self: start;
 		height: 90vh;
 		overflow-y: auto;
@@ -132,22 +133,22 @@
 	}
 /* Scroll Bar */
 	/* width */
-	::-webkit-scrollbar {
-		width: 1px;
+	nav::-webkit-scrollbar {
+		width: 3px;
 	}
 
 	/* Track */
-	::-webkit-scrollbar-track {
+	nav::-webkit-scrollbar-track {
 		background: #f1f1f1;
 	}
 
 	/* Handle */
-	::-webkit-scrollbar-thumb {
+	nav::-webkit-scrollbar-thumb {
 		background: #888;
 	}
 
 	/* Handle on hover */
-	::-webkit-scrollbar-thumb:hover {
+	nav::-webkit-scrollbar-thumb:hover {
 		background: #555;
 	}
 /* Heading styles */
@@ -302,13 +303,13 @@
 	}
 	pre {
 		margin: 0.5% 0;
-		padding: 0.4rem 0.45rem;
+		padding: 0;
 		overflow: auto;
 		border: 1px solid rgb(182, 182, 182);
 		border-radius: 0.3em;
 	}
 	pre[class*="language-pseudo"] {
-		padding: 0.2em 0.4em;
+		padding: 0;
 		border: dashed 1px rgb(164, 164, 164);
 		margin: 1% 0;
 		text-align: left;
@@ -468,7 +469,7 @@
 	}
 	table.truth_table td {
 		margin: 0; 
-		padding: 0.2em; 
+		padding: 0.5em; 
 		text-align: center; 
 		width: fit-content;
 		font-family: "Inconsolata";
