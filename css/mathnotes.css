@@ -82,7 +82,7 @@
 	article:nth-child(1) {margin-top: 2vh;}
 	section {margin: 0; padding: 1em 0 0 1em;}
 
-	/* Nav Bar */
+/* Nav Bar */
 	html {
 		scroll-behavior: smooth;
 	}
